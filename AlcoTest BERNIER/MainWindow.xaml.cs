@@ -22,15 +22,15 @@ namespace AlcoTest_BERNIER
     {
         CBuveur buveur;
 
-        private string[] listeboisson = { "Bière", "Vodka", "Rhume", "Tequila", "Gin", "Wisky" };
+        private string[] listeboisson = { "Bière", "Vodka", "Rhum", "Tequila", "Gin", "Wisky" };
 
         public MainWindow()
         {
 
-            
+
 
             InitializeComponent();
-            
+
             foreach (string boisson in listeboisson)
             {
                 Cboisson.Items.Add(boisson);
@@ -52,7 +52,7 @@ namespace AlcoTest_BERNIER
 
                 TauxAlcool.Text = buveur.get_alcoolemie().ToString();
 
-                buveur.list.Add(Cboisson.SelectionBoxItem+" "+Qte.Text+"cl "+Taux.Text+"%");
+                buveur.list.Add(Cboisson.SelectionBoxItem + " " + Qte.Text + "cl " + Taux.Text + "%");
 
 
                 TextBox test = new TextBox();
@@ -93,7 +93,7 @@ namespace AlcoTest_BERNIER
                 Maj_Alcool();
 
             }
- 
+
 
 
 
@@ -124,15 +124,40 @@ namespace AlcoTest_BERNIER
             }
         }
 
-        private void boisson_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void Boisson_TextUpdate(object sender, EventArgs e)
         {
-            string boisson = String.Format(Cboisson.SelectionBoxItem.ToString());
-
-            switch (boisson)
+            
+            switch (Cboisson.SelectedItem)
             {
                 case "Bière":
-                    Qte.Text = Convert.ToString(7);
-                    case "Vodkha:"
+                    Taux.Text = "7";
+                    Qte.Text = "33";
+                    break;
+
+                case "Vodka":
+                    Taux.Text = "40";
+                    Qte.Text = "2";
+                    break;
+
+                case "Rhum":
+                    Taux.Text = Convert.ToString(37.5);
+                    Qte.Text = Convert.ToString(2);
+                    break;
+
+                case "Tequila":
+                    Taux.Text = Convert.ToString(35);
+                    Qte.Text = Convert.ToString(2);
+                    break;
+
+                case "Gin":
+                    Taux.Text = Convert.ToString(37.5);
+                    Qte.Text = Convert.ToString(2);
+                    break;
+
+                case "Wisky":
+                    Taux.Text = Convert.ToString(40);
+                    Qte.Text = Convert.ToString(2);
+                    break;
             }
         }
     }

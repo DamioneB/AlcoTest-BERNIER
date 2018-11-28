@@ -12,3 +12,4 @@ C:\Users\damione.bernier\source\repos\AlcoTest BERNIER\AlcoTest BERNIER\obj\Debu
 C:\Users\damione.bernier\source\repos\AlcoTest BERNIER\AlcoTest BERNIER\obj\Debug\AlcoTest BERNIER.csproj.CoreCompileInputs.cache
 C:\Users\damione.bernier\source\repos\AlcoTest BERNIER\AlcoTest BERNIER\obj\Debug\AlcoTest BERNIER.exe
 C:\Users\damione.bernier\source\repos\AlcoTest BERNIER\AlcoTest BERNIER\obj\Debug\AlcoTest BERNIER.pdb
+C:\Users\damione.bernier\source\repos\AlcoTest BERNIER\AlcoTest BERNIER\obj\Debug\AlcoTest BERNIER.csprojResolveAssemblyReference.cache
