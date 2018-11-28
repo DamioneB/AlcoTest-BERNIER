@@ -1,0 +1,14 @@
+C:\Users\damione.bernier\source\repos\AlcoTest BERNIER\AlcoTest BERNIER\obj\Debug\MainWindow.g.cs
+C:\Users\damione.bernier\source\repos\AlcoTest BERNIER\AlcoTest BERNIER\obj\Debug\App.g.cs
+C:\Users\damione.bernier\source\repos\AlcoTest BERNIER\AlcoTest BERNIER\obj\Debug\AlcoTest BERNIER_MarkupCompile.cache
+C:\Users\damione.bernier\source\repos\AlcoTest BERNIER\AlcoTest BERNIER\obj\Debug\AlcoTest BERNIER_MarkupCompile.lref
+C:\Users\damione.bernier\source\repos\AlcoTest BERNIER\AlcoTest BERNIER\bin\Debug\AlcoTest BERNIER.exe.config
+C:\Users\damione.bernier\source\repos\AlcoTest BERNIER\AlcoTest BERNIER\bin\Debug\AlcoTest BERNIER.exe
+C:\Users\damione.bernier\source\repos\AlcoTest BERNIER\AlcoTest BERNIER\bin\Debug\AlcoTest BERNIER.pdb
+C:\Users\damione.bernier\source\repos\AlcoTest BERNIER\AlcoTest BERNIER\obj\Debug\MainWindow.baml
+C:\Users\damione.bernier\source\repos\AlcoTest BERNIER\AlcoTest BERNIER\obj\Debug\AlcoTest BERNIER.g.resources
+C:\Users\damione.bernier\source\repos\AlcoTest BERNIER\AlcoTest BERNIER\obj\Debug\AlcoTest_BERNIER.Properties.Resources.resources
+C:\Users\damione.bernier\source\repos\AlcoTest BERNIER\AlcoTest BERNIER\obj\Debug\AlcoTest BERNIER.csproj.GenerateResource.Cache
+C:\Users\damione.bernier\source\repos\AlcoTest BERNIER\AlcoTest BERNIER\obj\Debug\AlcoTest BERNIER.csproj.CoreCompileInputs.cache
+C:\Users\damione.bernier\source\repos\AlcoTest BERNIER\AlcoTest BERNIER\obj\Debug\AlcoTest BERNIER.exe
+C:\Users\damione.bernier\source\repos\AlcoTest BERNIER\AlcoTest BERNIER\obj\Debug\AlcoTest BERNIER.pdb
