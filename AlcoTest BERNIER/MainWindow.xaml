@@ -5,34 +5,45 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AlcoTest_BERNIER"
         mc:Ignorable="d"
-        Title="MainWindow" Height="360.041" Width="558.709">
+        Title="MainWindow" Height="377.041" Width="629.709">
     <Grid>
-        <RadioButton Name="Homme" Content="Homme" HorizontalAlignment="Left" Margin="34,33,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" />
-        <RadioButton Name="Femme" Content="Femme" HorizontalAlignment="Left" Margin="134,33,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked_1"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <RadioButton Name="Homme" Content="Homme" HorizontalAlignment="Left" Margin="34,33,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" Height="15" Width="61" />
+        <RadioButton Name="Femme" Content="Femme" HorizontalAlignment="Left" Margin="134,33,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked_1" Height="15" Width="58"/>
 
-        <Label Content="Poid :" HorizontalAlignment="Left" Height="23" Margin="252,25,0,0" VerticalAlignment="Top" Width="41"/>
-        <TextBox Name="Poid" HorizontalAlignment="Left" Height="15" Margin="293,33,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="50"/>
+        <Label Content="Poid :" HorizontalAlignment="Left" Height="23" Margin="274,25,0,0" VerticalAlignment="Top" Width="41"/>
+        <TextBox Name="Poid" HorizontalAlignment="Left" Height="15" Margin="315,33,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="50"/>
 
-        <Label  Content="Quantité :" HorizontalAlignment="Left" Margin="10,98,0,0" VerticalAlignment="Top"/>
+        <Label  Content="Quantité :" HorizontalAlignment="Left" Margin="10,98,0,0" VerticalAlignment="Top" Height="26" Width="62"/>
         <TextBox Name="Qte" HorizontalAlignment="Left" Height="15" Margin="72,103,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="72"/>
 
-        <Label Content="Boisson :" HorizontalAlignment="Left" Margin="347,98,0,0" VerticalAlignment="Top"/>
-        <ComboBox Name="Cboisson" HorizontalAlignment="Left" Margin="404,102,-7,0" VerticalAlignment="Top" Width="120" SelectionChanged="Boisson_TextUpdate"/>
+        <Label Content="Boisson :" HorizontalAlignment="Left" Margin="408,98,0,0" VerticalAlignment="Top" Height="26" Width="57"/>
+        <ComboBox Name="Cboisson" HorizontalAlignment="Left" Margin="470,102,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="Boisson_TextUpdate" Height="22"/>
 
-        <Label  Content="Pourcentage :" HorizontalAlignment="Left" Margin="170,98,0,0" VerticalAlignment="Top"/>
-        <TextBox Name="Taux" HorizontalAlignment="Left" Height="15" Margin="252,103,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="69"/>
-
+        <Label  Content="Pourcentage :" HorizontalAlignment="Left" Margin="188,98,0,0" VerticalAlignment="Top" Height="26" Width="82"/>
+        <TextBox Name="Taux" HorizontalAlignment="Left" Height="15" Margin="274,103,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="69"/>
 
         <Button Content="Ajouter" HorizontalAlignment="Left" Height="18" Margin="20,167,0,0" VerticalAlignment="Top" Width="87" Click="Button_Click"/>
         <Button Content="Reinitialiser" HorizontalAlignment="Left" Height="18" Margin="20,201,0,0" VerticalAlignment="Top" Width="87" Click="Button_Click_1" />
 
+        <Label  Content="Taux :" HorizontalAlignment="Left" Margin="312,164,0,0" VerticalAlignment="Top" Height="26" Width="39"/>
+        <TextBox Name="TauxAlcool" HorizontalAlignment="Left" Height="15" Margin="351,170,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="56"/>
 
-        <Label  Content="Taux :" HorizontalAlignment="Left" Margin="290,164,0,0" VerticalAlignment="Top"/>
-        <TextBox Name="TauxAlcool" HorizontalAlignment="Left" Height="15" Margin="329,170,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="56"/>
+        <Label Content="L'alcool aura disparu dans :" HorizontalAlignment="Left" Margin="312,201,0,0" VerticalAlignment="Top" Height="26" Width="153"/>
+        <TextBox Name="Elimination" HorizontalAlignment="Left" Height="15" Margin="470,206,0,0"  TextWrapping="Wrap"  VerticalAlignment="Top" Width="76"/>
+
+        <Label Content="La conduite sera possible dans :" HorizontalAlignment="Left" Margin="312,232,0,0" VerticalAlignment="Top" Height="26" Width="179"/>
+        <TextBox Name="Conduite" HorizontalAlignment="Left" Height="15" Margin="490,239,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="76"/>
+
 
         <GroupBox Header="Consomation" Name="Consomation" Margin="126,129,0,0" HorizontalAlignment="Left" Width="144" Height="177" VerticalAlignment="Top">
             <ListBox Name="Liste_Alcool" HorizontalAlignment="Left" Height="140" Margin="0,10,0,0" VerticalAlignment="Top" Width="120" />
         </GroupBox>
+        
+
+
 
 
 

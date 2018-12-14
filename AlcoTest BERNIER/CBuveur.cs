@@ -35,6 +35,8 @@ namespace AlcoTest_BERNIER
             taux_alcoolemie = 0;
         }
 
+         
+
         public void MAJ_alcoolemie(int qte, double tx)
         {
             double qte_totale_alc_absorbee; // en grammes
@@ -63,5 +65,8 @@ namespace AlcoTest_BERNIER
         {
             return taux_alcoolemie;
         }
+
+        
+        
     }
 }

@@ -40,6 +40,50 @@ namespace AlcoTest_BERNIER
 
         }
 
+        public void Maj_Conduite()
+        {
+            double taux = buveur.get_alcoolemie();
+            double conduite = 0;
+            double temp = 0;
+            
+
+            conduite = taux;
+
+            if (conduite > 0.5)
+                do
+                {
+                    if (Homme.IsChecked == true)
+                    {
+                        conduite = conduite - 0.1;
+                        temp++;
+                    }
+                    else
+                    {
+                        conduite = conduite - 0.085;
+                        temp++;
+                    }
+
+                } while (conduite > 0.5);
+
+            Conduite.Text = Math.Round(temp + 0.5, 2).ToString() + " H";
+        }
+
+        public void Maj_Elimination()
+        {
+            double taux = buveur.get_alcoolemie();
+            double elimination = 0;
+
+            if (Homme.IsChecked == true)
+            {
+                elimination = taux / 0.10;
+            }
+            else if (Femme.IsChecked == true)
+            {
+                elimination = taux / 0.085;
+            }
+            Elimination.Text = Math.Round(elimination, 2).ToString() + " Heures";
+        }
+
         public void Maj_Alcool()
         {
             if (buveur != null)
@@ -49,29 +93,49 @@ namespace AlcoTest_BERNIER
 
                 buveur.MAJ_alcoolemie(qte, taux);
 
-
                 TauxAlcool.Text = buveur.get_alcoolemie().ToString();
 
                 buveur.list.Add(Cboisson.SelectionBoxItem + " " + Qte.Text + "cl " + Taux.Text + "%");
 
-
-                TextBox test = new TextBox();
-                test.Name = "Liste_" + buveur.i.ToString();
-                test.Text = buveur.list[buveur.i];
                 Liste_Alcool.Items.Add(buveur.list[buveur.i]);
                 buveur.i++;
+                Maj_Elimination();
+                Maj_Conduite();
             }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            bool ready = false;
 
             Maj_Alcool();
+
 
             if (buveur == null)
             {
 
+                if (Homme.IsChecked == false && Femme.IsChecked == false)
+                {
+                    MessageBox.Show("Merci de chosir un sexe");
+                    ready = false;
+                }
+                if (Poid.Text == "")
+                {
+                    MessageBox.Show("Merci d'entrer une valeur de poid");
+                    ready = false;
+                }
+                else
+                {
+                    ready = true;
+                }
+            }
+
+
+            if (buveur == null && ready == true)
+            {
+
                 bool homme = true;
+
                 int poid = Convert.ToInt32(Poid.Text);
 
 
@@ -94,10 +158,6 @@ namespace AlcoTest_BERNIER
 
             }
 
-
-
-
-
         }
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
@@ -114,19 +174,18 @@ namespace AlcoTest_BERNIER
         {
             if (buveur != null)
             {
-                buveur.reset_alcoolemie();
-                TauxAlcool.Text = buveur.get_alcoolemie().ToString();
-                buveur.list.Clear();
+                TauxAlcool.Text = "";
+                Elimination.Text = "";
+                Conduite.Text = "";
                 Liste_Alcool.Items.Clear();
-                buveur.i = 0;
-
-
+                buveur = null;
+                GC.Collect();
             }
         }
 
         private void Boisson_TextUpdate(object sender, EventArgs e)
         {
-            
+
             switch (Cboisson.SelectedItem)
             {
                 case "Bière":
@@ -160,5 +219,6 @@ namespace AlcoTest_BERNIER
                     break;
             }
         }
+
     }
 }
